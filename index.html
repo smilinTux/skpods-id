@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>skpods.id: your name on the web, owned by you</title>
+<meta name="description" content="skpods.id will give you a WebID: one web address that is your identity, for logging in to Solid apps and for your AI guardian. Your identity stays here, your data lives in a pod wherever you choose. Coming soon.">
+<link rel="canonical" href="https://skpods.id/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://skpods.id/">
+<meta property="og:title" content="skpods.id: your name on the web, owned by you">
+<meta property="og:description" content="One web address that is you. Your identity stays put, your data lives wherever you choose. Coming soon.">
+<meta property="og:image" content="https://skpods.skworld.io/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://skpods.skworld.io/og.png">
+<meta name="theme-color" content="#14171c">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%AA%AA</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Public+Sans:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#14171c;--ink:#f6f3ee;--muted:#9aa4b0;--soft:#c9d1da;--accent:#f0794a;--teal:#5fb6d1;--line:#252d37;--card:#171c23}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font-family:"Public Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden;position:relative}
+body::before{content:"";position:fixed;right:-20rem;top:-20rem;width:55rem;height:55rem;background:radial-gradient(closest-side,rgba(18,101,127,.5),transparent 70%);pointer-events:none}
+body::after{content:"";position:fixed;left:-20rem;bottom:-25rem;width:50rem;height:50rem;background:radial-gradient(closest-side,rgba(212,84,31,.3),transparent 70%);pointer-events:none}
+main{position:relative;z-index:1;max-width:46rem;margin:0 auto;padding:4rem 1.25rem 3rem}
+.eyebrow{font-family:"JetBrains Mono",monospace;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#f0a07c;border:1px solid rgba(240,160,124,.35);padding:.3rem .7rem;border-radius:999px;display:inline-block}
+h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(2.4rem,7vw,4rem);line-height:1.04;letter-spacing:-.02em;margin:1.2rem 0 1rem}
+h1 em{font-style:normal;background:linear-gradient(100deg,#f0794a,#ffc29f 45%,#5fb6d1);-webkit-background-clip:text;background-clip:text;color:transparent}
+p{color:var(--soft)}
+.handle{margin:2rem 0;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.4rem}
+.handle label{font-family:"JetBrains Mono",monospace;font-size:.78rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.row{display:flex;align-items:center;gap:.2rem;margin-top:.6rem;font-family:"JetBrains Mono",monospace;font-size:clamp(1.1rem,4vw,1.5rem);flex-wrap:wrap}
+.row input{background:transparent;border:0;border-bottom:2px solid var(--accent);color:var(--ink);font:inherit;width:9ch;min-width:5ch;padding:.1rem 0;outline:none}
+.row span{color:var(--teal)}
+.webid{font-family:"JetBrains Mono",monospace;font-size:.82rem;color:var(--muted);margin-top:.8rem;word-break:break-all}
+.cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.2rem}
+.btn{display:inline-flex;align-items:center;padding:.75rem 1.15rem;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid transparent}
+.btn.primary{background:#d4541f;color:#fff}
+.btn.ghost{border-color:rgba(255,255,255,.22);color:var(--ink)}
+.points{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem}
+.pt{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1rem}
+.pt b{font-family:"Bricolage Grotesque",sans-serif;display:block;margin-bottom:.3rem}
+.pt span{color:var(--muted);font-size:.92rem}
+footer{position:relative;z-index:1;text-align:center;color:var(--muted);font-size:.88rem;padding:0 1.25rem 3rem}
+footer a{color:var(--accent);text-decoration:none}
+@media (max-width:620px){.points{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+  <span class="eyebrow">Coming soon &middot; part of SKPods</span>
+  <h1>Your name on the web.<br><em>Owned by you.</em></h1>
+  <p>skpods.id will give you a <b>WebID</b>: one web address that is you. You log in to Solid apps with it, your AI guardian answers on its behalf, and no company owns it. Your identity stays here, always online. Your data lives in a pod wherever you choose: your laptop, a USB stick, a home server, or with us.</p>
+
+  <div class="handle">
+    <label for="name">Pick a name</label>
+    <div class="row"><input id="name" value="you" maxlength="30" autocomplete="off" spellcheck="false" aria-label="Your name"><span>.skpods.id</span></div>
+    <div class="webid" id="webid">WebID: https://you.skpods.id/profile/card#me</div>
+    <div class="cta">
+      <a class="btn primary" id="claim" href="https://github.com/smilinTux/skpods/issues/new?title=skpods.id%3A%20reserve%20you">Get on the list</a>
+      <a class="btn ghost" href="https://skpods.skworld.io/#what">What is a pod?</a>
+    </div>
+  </div>
+
+  <div class="points">
+    <div class="pt"><b>Always online</b><span>Your identity answers even when your laptop sleeps.</span></div>
+    <div class="pt"><b>Portable</b><span>Move your data anywhere. Your name and your logins keep working.</span></div>
+    <div class="pt"><b>Open standard</b><span>Plain Solid WebID. No lock-in, no tokens, no chain.</span></div>
+  </div>
+</main>
+<footer>Part of <a href="https://skpods.skworld.io/">SKPods</a> and <a href="https://skworld.io/">SKWorld</a>. Built in the open by <a href="https://github.com/smilinTux">smilinTux</a>.</footer>
+<script>
+const i=document.getElementById('name'),w=document.getElementById('webid'),c=document.getElementById('claim');
+function upd(){const n=(i.value||'you').toLowerCase().replace(/[^a-z0-9-]/g,'').slice(0,30)||'you';
+ if(i.value!==n&&i.value!=='')i.value=n;
+ w.textContent='WebID: https://'+n+'.skpods.id/profile/card#me';
+ c.href='https://github.com/smilinTux/skpods/issues/new?title='+encodeURIComponent('skpods.id: reserve '+n)+'&body='+encodeURIComponent('I would like the name '+n+'.skpods.id when it launches.');}
+i.addEventListener('input',upd);upd();
+</script>
+</body>
+</html>
